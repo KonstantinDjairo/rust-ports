@@ -113,7 +113,7 @@ SUBST_VARS +=	WRKBUILD
 post-patch:
 	sed -i 's/"files":{[^}]*}/"files":{}/' \
 		${WRKSRC}/src/vendor/*/.cargo-checksum.json
-	${SUBST_CMD} ${WRKSRC}/src/tools/cargo/tests/testsuite/cargotest/support/paths.rs
+	${SUBST_CMD} ${WRKSRC}/src/tools/cargo/tests/testsuite/support/paths.rs
 
 # - check datasize limit before configuring (and building)
 pre-configure:

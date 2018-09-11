@@ -3,11 +3,11 @@ Disable stack-probes test (MAP_STACK terminate the process in a way the testsuit
 Index: src/test/run-pass/stack-probes-lto.rs
 --- src/test/run-pass/stack-probes-lto.rs.orig
 +++ src/test/run-pass/stack-probes-lto.rs
-@@ -21,6 +21,7 @@
+@@ -17,6 +17,7 @@
+ // ignore-sparc
+ // ignore-sparc64
+ // ignore-wasm
++// ignore-openbsd
+ // ignore-cloudabi no processes
  // ignore-emscripten no processes
  // ignore-musl FIXME #31506
- // ignore-pretty
-+// ignore-openbsd
- // min-system-llvm-version 5.0
- // compile-flags: -C lto
- // no-prefer-dynamic
