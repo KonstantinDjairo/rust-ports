@@ -11,8 +11,8 @@ DPB_PROPERTIES =	parallel
 COMMENT-main =		compiler for Rust Language
 COMMENT-doc =		html documentation for rustc
 
-V =			1.28.0
-CARGO_V =		0.29.0
+V =			1.29.0
+CARGO_V =		0.30.0
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
