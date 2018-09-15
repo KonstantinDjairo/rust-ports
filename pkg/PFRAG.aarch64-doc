@@ -466,6 +466,5 @@ share/doc/rust/html/core/coresimd/x86_64/bmi2/fn._pext_u64.html
 share/doc/rust/html/src/core/up/stdsimd/coresimd/aarch64/neon.rs.html
 share/doc/rust/html/src/core/up/stdsimd/coresimd/arm/neon.rs.html
 share/doc/rust/html/src/core/up/stdsimd/coresimd/arm/v7.rs.html
-share/doc/rust/html/src/core/up/stdsimd/coresimd/ppsv/codegen/wrapping.rs.html
 share/doc/rust/html/src/std/up/stdsimd/stdsimd/arch/detect/arch/aarch64.rs.html
 share/doc/rust/html/src/std/up/stdsimd/stdsimd/arch/detect/os/other.rs.html
