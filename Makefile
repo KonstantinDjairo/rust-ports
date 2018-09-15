@@ -88,7 +88,8 @@ LIB_DEPENDS +=		devel/libgit2/libgit2 \
 			net/curl \
 			security/libssh2
 
-MAKE_ENV +=	LIBGIT2_SYS_USE_PKG_CONFIG=1
+MAKE_ENV +=	LIBGIT2_SYS_USE_PKG_CONFIG=1 \
+		LIBSSH2_SYS_USE_PKG_CONFIG=1
 TEST_ENV +=	RUST_BACKTRACE=0
 
 .ifdef DEBUG
