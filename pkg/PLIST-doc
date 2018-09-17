@@ -1,4 +1,4 @@
-@comment $OpenBSD: PLIST-doc,v 1.31 2018/08/06 19:07:50 landry Exp $
+@comment $OpenBSD: PLIST-doc,v 1.32 2018/09/16 16:35:27 landry Exp $
 %%aarch64%%
 %%amd64%%
 %%i386%%

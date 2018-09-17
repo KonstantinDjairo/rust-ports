@@ -1,4 +1,4 @@
-@comment $OpenBSD: PFRAG.amd64-doc,v 1.2 2018/06/29 05:19:47 landry Exp $
+@comment $OpenBSD: PFRAG.amd64-doc,v 1.3 2018/09/16 16:35:27 landry Exp $
 share/doc/rust/html/core/arch/x86/_blcfill_u64.v.html
 share/doc/rust/html/core/arch/x86/_blci_u64.v.html
 share/doc/rust/html/core/arch/x86/_blcic_u64.v.html
