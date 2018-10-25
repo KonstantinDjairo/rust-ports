@@ -24,8 +24,6 @@ BV =			${BV-${MACHINE_ARCH}}
 PKGNAME =		rust-${V}
 PKGNAME-main =		rust-${V}
 PKGNAME-doc =		rust-doc-${V}
-REVISION-doc =		0
-REVISION-main =		0
 
 MULTI_PACKAGES =	-main -doc
 
