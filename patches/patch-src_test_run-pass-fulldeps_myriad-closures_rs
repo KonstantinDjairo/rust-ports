@@ -5,7 +5,7 @@ Index: src/test/run-pass-fulldeps/myriad-closures.rs
 +++ src/test/run-pass-fulldeps/myriad-closures.rs
 @@ -16,6 +16,8 @@
  // Make sure we don't optimize anything away:
- // compile-flags: -C no-prepopulate-passes
+ // compile-flags: -C no-prepopulate-passes -Cpasses=name-anon-globals
  
 +// ignore-openbsd
 +
