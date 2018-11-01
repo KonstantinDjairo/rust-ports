@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_test_run-pass-fulldeps_myriad-closures_rs,v 1.1 2017/12/04 17:31:49 landry Exp $
+$OpenBSD: patch-src_test_run-pass-fulldeps_myriad-closures_rs,v 1.2 2018/11/01 13:50:30 landry Exp $
 
 Index: src/test/run-pass-fulldeps/myriad-closures.rs
 --- src/test/run-pass-fulldeps/myriad-closures.rs.orig

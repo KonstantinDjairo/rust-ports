@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_etc_rust-gdb,v 1.4 2018/08/06 19:07:50 landry Exp $
+$OpenBSD: patch-src_etc_rust-gdb,v 1.5 2018/11/01 13:50:30 landry Exp $
 only compatible with egdb (gdb from ports)
 Index: src/etc/rust-gdb
 --- src/etc/rust-gdb.orig

@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_tools_cargo_tests_testsuite_support_paths_rs,v 1.1 2018/09/16 16:35:27 landry Exp $
+$OpenBSD: patch-src_tools_cargo_tests_testsuite_support_paths_rs,v 1.2 2018/11/01 13:50:30 landry Exp $
 
 Index: src/tools/cargo/tests/testsuite/support/paths.rs
 --- src/tools/cargo/tests/testsuite/support/paths.rs.orig
