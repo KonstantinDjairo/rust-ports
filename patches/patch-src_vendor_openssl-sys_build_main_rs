@@ -3,12 +3,12 @@ The LibreSSL version in -current isn't explicitly supported.
 Index: src/vendor/openssl-sys/build/main.rs
 --- src/vendor/openssl-sys/build/main.rs.orig
 +++ src/vendor/openssl-sys/build/main.rs
-@@ -497,7 +497,7 @@ See rust-openssl README for more information:
-             (6, 2) => ('6', '2'),
-             (6, _) => ('6', 'x'),
+@@ -500,7 +500,7 @@ See rust-openssl README for more information:
              (7, _) => ('7', 'x'),
+             (8, 0) => ('8', '0'),
+             (8, 1) => ('8', '1'),
 -            _ => version_error(),
-+            _ => ('7', 'x'),
++            _ => ('8', '1'),
          };
  
          println!("cargo:libressl=true");
