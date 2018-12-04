@@ -218,27 +218,27 @@ do-test:
 # bootstrap target permits to regenerate the bootstrap archive
 BOOTSTRAPDIR=${WRKDIR}/rustc-bootstrap-${MACHINE_ARCH}-${V}-new
 bootstrap: build
-	rm -rf ${BOOTSTRAPDIR}
-	mkdir -p ${BOOTSTRAPDIR}/{bin,lib}
+	${_PBUILD} rm -rf ${BOOTSTRAPDIR}
+	${_PBUILD} mkdir -p ${BOOTSTRAPDIR}/{bin,lib}
 	${MAKE} clean=fake
 	${MAKE} fake \
 		PREFIX="${BOOTSTRAPDIR}" \
 		COMPONENTS="rustc-${V} rust-std-${V} cargo-${CARGO_V}" \
 		FAKE_SETUP=""
-	rm -rf ${BOOTSTRAPDIR}/{man,share} \
+	${_PBUILD} rm -rf ${BOOTSTRAPDIR}/{man,share} \
 		${BOOTSTRAPDIR}/bin/rust-gdb
-	strip ${BOOTSTRAPDIR}/lib/lib*.so \
+	${_PBUILD} strip ${BOOTSTRAPDIR}/lib/lib*.so \
 		${BOOTSTRAPDIR}/lib/rustlib/${TRIPLE_ARCH}/lib/lib*.so
 .for _bin in rustc rustdoc cargo
-	mv ${BOOTSTRAPDIR}/bin/${_bin} \
+	${_PBUILD} mv ${BOOTSTRAPDIR}/bin/${_bin} \
 		${BOOTSTRAPDIR}/bin/${_bin}.bin
-	strip ${BOOTSTRAPDIR}/bin/${_bin}.bin
-	cp ${WRKDIR}/rustc-bootstrap-${MACHINE_ARCH}-${BV}/bin/${_bin} \
+	${_PBUILD} strip ${BOOTSTRAPDIR}/bin/${_bin}.bin
+	${_PBUILD} cp ${WRKDIR}/rustc-bootstrap-${MACHINE_ARCH}-${BV}/bin/${_bin} \
 		${BOOTSTRAPDIR}/bin/${_bin}
 	LD_LIBRARY_PATH="${BOOTSTRAPDIR}/lib" \
 	LD_PRELOAD="${BOOTSTRAPDIR}/lib/rustlib/${TRIPLE_ARCH}/codegen-backends/librustc_codegen_llvm-llvm.so" \
 		ldd ${BOOTSTRAPDIR}/bin/${_bin}.bin \
 		| sed -ne 's,.* \(/.*/lib/lib.*\.so.[.0-9]*\)$$,\1,p' \
-		| xargs -r -J % cp % ${BOOTSTRAPDIR}/lib || true
+		| xargs -r -J % ${_PBUILD} cp % ${BOOTSTRAPDIR}/lib || true
 .endfor
 .include <bsd.port.mk>
