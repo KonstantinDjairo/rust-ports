@@ -18,7 +18,7 @@ DISTNAME =		rustc-${V}-src
 # rustc bootstrap version
 BV-aarch64 =		1.30.0-20181101
 BV-amd64 =		1.31.0-20181205
-BV-i386 =		1.31.0-20181204
+BV-i386 =		1.31.0-20181205
 BV =			${BV-${MACHINE_ARCH}}
 
 PKGNAME =		rust-${V}
