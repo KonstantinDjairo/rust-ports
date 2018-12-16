@@ -1,0 +1,6 @@
+@comment $OpenBSD: PLIST-gdb,v$
+bin/rust-gdb
+lib/rustlib/etc/gdb_load_rust_pretty_printers.py
+lib/rustlib/etc/gdb_load_rust_pretty_printers.pyc
+lib/rustlib/etc/gdb_rust_pretty_printing.py
+lib/rustlib/etc/gdb_rust_pretty_printing.pyc

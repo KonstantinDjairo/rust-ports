@@ -1,0 +1,7 @@
+@comment $OpenBSD: PLIST-clippy,v$
+@bin bin/cargo-clippy
+@bin bin/clip${MODPY_PY_PREFIX}driver
+share/doc/clippy/
+share/doc/clippy/LICENSE-APACHE
+share/doc/clippy/LICENSE-MIT
+share/doc/clippy/README.md
