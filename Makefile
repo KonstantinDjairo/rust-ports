@@ -14,7 +14,7 @@ COMMENT-gdb =		Rust debugger thought gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
-V =			1.31.0
+V =			1.31.1
 CARGO_V =		0.32.0
 CLIPPY_V =		0.0.212
 RUSTFMT_V =		1.0.0
