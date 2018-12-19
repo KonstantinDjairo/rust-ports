@@ -20,8 +20,6 @@ CLIPPY_V =		0.0.212
 RUSTFMT_V =		1.0.0
 DISTNAME =		rustc-${V}-src
 
-REVISION-main =		0
-
 # rustc bootstrap version
 BV-aarch64 =		1.31.0-20181207
 BV-amd64 =		1.31.0-20181205
