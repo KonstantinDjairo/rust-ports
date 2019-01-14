@@ -10,7 +10,7 @@ DPB_PROPERTIES =	parallel
 
 COMMENT-main =		compiler for Rust Language
 COMMENT-doc =		html documentation for rustc
-COMMENT-gdb =		Rust debugger thought gdb
+COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
