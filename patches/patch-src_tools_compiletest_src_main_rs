@@ -1,5 +1,6 @@
 $OpenBSD$
 unbreak testsuite build.
+see https://github.com/rust-lang/rust/issues/57709
 Index: src/tools/compiletest/src/main.rs
 --- src/tools/compiletest/src/main.rs.orig
 +++ src/tools/compiletest/src/main.rs
