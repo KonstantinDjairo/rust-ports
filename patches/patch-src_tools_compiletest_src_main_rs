@@ -1,4 +1,4 @@
-$OpenBSD$
+$OpenBSD: patch-src_tools_compiletest_src_main_rs,v 1.3 2019/01/22 05:07:19 semarie Exp $
 unbreak testsuite build.
 see https://github.com/rust-lang/rust/issues/57709
 Index: src/tools/compiletest/src/main.rs

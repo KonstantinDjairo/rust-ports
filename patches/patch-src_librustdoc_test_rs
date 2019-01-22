@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_librustdoc_test_rs,v 1.19 2018/11/01 13:50:30 landry Exp $
+$OpenBSD: patch-src_librustdoc_test_rs,v 1.20 2019/01/22 04:47:48 semarie Exp $
 fallback to LOCALBASE as default sysroot.
 Index: src/librustdoc/test.rs
 --- src/librustdoc/test.rs.orig
