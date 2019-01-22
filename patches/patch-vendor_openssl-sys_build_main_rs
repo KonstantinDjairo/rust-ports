@@ -1,5 +1,5 @@
 $OpenBSD$
-
+The LibreSSL version in -current isn't explicitly supported.
 Index: vendor/openssl-sys/build/main.rs
 --- vendor/openssl-sys/build/main.rs.orig
 +++ vendor/openssl-sys/build/main.rs
