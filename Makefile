@@ -96,7 +96,7 @@ MODPY_RUNDEP =		No
 
 BUILD_DEPENDS +=	devel/cmake
 BUILD_DEPENDS +=	shells/bash
-BUILD_DEPENDS +=	devel/llvm>=6.0,<6.1
+BUILD_DEPENDS +=	devel/llvm
 BUILD_DEPENDS +=	devel/ninja
 BUILD_DEPENDS +=	devel/gdb
 
@@ -109,7 +109,8 @@ RUN_DEPENDS-gdb +=	lang/rust,-main \
 RUN_DEPENDS-clippy +=	lang/rust,-main
 RUN_DEPENDS-rustfmt +=	lang/rust,-main
 
-MAKE_ENV +=	LIBGIT2_SYS_USE_PKG_CONFIG=1 \
+MAKE_ENV +=	OPENBSD_PORTS_LANG_RUST_VERSION=${V:C/\.[0-9]*$//} \
+		LIBGIT2_SYS_USE_PKG_CONFIG=1 \
 		LIBSSH2_SYS_USE_PKG_CONFIG=1
 TEST_ENV +=	RUST_BACKTRACE=0
 
