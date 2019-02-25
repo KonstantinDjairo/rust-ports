@@ -3,7 +3,7 @@ $OpenBSD: patch-src_test_run-pass-fulldeps_myriad-closures_rs,v 1.2 2018/11/01 1
 Index: src/test/run-pass-fulldeps/myriad-closures.rs
 --- src/test/run-pass-fulldeps/myriad-closures.rs.orig
 +++ src/test/run-pass-fulldeps/myriad-closures.rs
-@@ -16,6 +16,8 @@
+@@ -6,6 +6,8 @@
  // Make sure we don't optimize anything away:
  // compile-flags: -C no-prepopulate-passes -Cpasses=name-anon-globals
  

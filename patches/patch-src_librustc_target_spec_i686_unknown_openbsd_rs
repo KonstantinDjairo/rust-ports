@@ -3,7 +3,7 @@ i386 should be pentiumpro (no SSE2, no ...)
 Index: src/librustc_target/spec/i686_unknown_openbsd.rs
 --- src/librustc_target/spec/i686_unknown_openbsd.rs.orig
 +++ src/librustc_target/spec/i686_unknown_openbsd.rs
-@@ -12,7 +12,7 @@ use spec::{LinkerFlavor, Target, TargetResult};
+@@ -2,7 +2,7 @@ use spec::{LinkerFlavor, Target, TargetResult};
  
  pub fn target() -> TargetResult {
      let mut base = super::openbsd_base::opts();

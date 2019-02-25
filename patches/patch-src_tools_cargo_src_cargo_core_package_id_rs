@@ -4,7 +4,7 @@ See https://github.com/rust-lang/rust/issues/39786
 Index: src/tools/cargo/src/cargo/core/package_id.rs
 --- src/tools/cargo/src/cargo/core/package_id.rs.orig
 +++ src/tools/cargo/src/cargo/core/package_id.rs
-@@ -111,7 +111,6 @@ impl<'a> Hash for PackageId {
+@@ -108,7 +108,6 @@ impl<'a> Hash for PackageId {
      fn hash<S: hash::Hasher>(&self, state: &mut S) {
          self.inner.name.hash(state);
          self.inner.version.hash(state);

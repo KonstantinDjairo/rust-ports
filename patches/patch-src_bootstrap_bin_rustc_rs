@@ -4,7 +4,7 @@ try to reduce memory usage on aarch64:
 Index: src/bootstrap/bin/rustc.rs
 --- src/bootstrap/bin/rustc.rs.orig
 +++ src/bootstrap/bin/rustc.rs
-@@ -189,6 +189,11 @@ fn main() {
+@@ -179,6 +179,11 @@ fn main() {
              cmd.arg("-C").arg(format!("codegen-units={}", s));
          }
  

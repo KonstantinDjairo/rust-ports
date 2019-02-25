@@ -4,7 +4,7 @@ Use an environment variable to override the verbose_version from rustc with choo
 Index: src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
 --- src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs.orig
 +++ src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
-@@ -464,7 +464,11 @@ fn compute_metadata<'a, 'cfg>(
+@@ -512,7 +512,11 @@ fn compute_metadata<'a, 'cfg>(
      unit.target.name().hash(&mut hasher);
      unit.target.kind().hash(&mut hasher);
  
