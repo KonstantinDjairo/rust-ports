@@ -17,12 +17,12 @@ COMMENT-rustfmt =	Rust code formatter
 V =			1.33.0
 CARGO_V =		0.34.0
 CLIPPY_V =		0.0.212
-RUSTFMT_V =		1.0.0
+RUSTFMT_V =		1.0.1
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
 BV-aarch64 =		1.32.0-20190126
-BV-amd64 =		1.32.0-20190125
+BV-amd64 =		1.33.0-20190225
 BV-i386 =		1.32.0-20190125
 BV =			${BV-${MACHINE_ARCH}}
 
