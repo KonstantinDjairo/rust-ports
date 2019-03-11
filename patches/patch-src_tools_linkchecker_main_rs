@@ -1,4 +1,4 @@
-$OpenBSD$
+$OpenBSD: patch-src_tools_linkchecker_main_rs,v 1.1 2019/03/11 19:13:40 semarie Exp $
 src/tools is build using 1.33.0, whereas upstream expects it to be build with 1.32.0.
 Index: src/tools/linkchecker/main.rs
 --- src/tools/linkchecker/main.rs.orig
