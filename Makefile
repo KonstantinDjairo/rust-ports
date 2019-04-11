@@ -21,7 +21,7 @@ RUSTFMT_V =		1.0.3
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
-BV-aarch64 =		1.33.0-20190301
+BV-aarch64 =		1.34.0-20190411
 BV-amd64 =		1.34.0-20190409
 BV-i386 =		1.34.0-20190409
 BV =			${BV-${MACHINE_ARCH}}
