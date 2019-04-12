@@ -90,3 +90,5 @@ share/doc/rust/html/core/core_arch/x86_64/bmi2/fn._bzhi_u64.html
 share/doc/rust/html/core/core_arch/x86_64/bmi2/fn._mulx_u64.html
 share/doc/rust/html/core/core_arch/x86_64/bmi2/fn._pdep_u64.html
 share/doc/rust/html/core/core_arch/x86_64/bmi2/fn._pext_u64.html
+share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/arch/x86.rs.html
+share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/os/x86.rs.html

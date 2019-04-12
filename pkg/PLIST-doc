@@ -13860,13 +13860,11 @@ share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/arch/
-share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/arch/x86.rs.html
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/bit.rs.html
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/cache.rs.html
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/error_macros.rs.html
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/mod.rs.html
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/os/
-share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/detect/os/x86.rs.html
 share/doc/rust/html/src/std/up/stdsimd/crates/std_detect/src/mod.rs.html
 share/doc/rust/html/src/test/
 share/doc/rust/html/src/test/formatters/
