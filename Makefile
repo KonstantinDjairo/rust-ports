@@ -9,12 +9,12 @@ DPB_PROPERTIES =	parallel
 .endif
 
 COMMENT-main =		compiler for Rust Language
-COMMENT-doc =		html documentation for rustc
 COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
 V =			1.34.0
+REVISION =		0
 CARGO_V =		0.35.0
 CLIPPY_V =		0.0.212
 RUSTFMT_V =		1.0.3
@@ -22,18 +22,17 @@ DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
 BV-aarch64 =		1.34.0-20190411
-BV-amd64 =		1.34.0-20190409
+BV-amd64 =		1.34.0-20190413
 BV-i386 =		1.34.0-20190409
 BV =			${BV-${MACHINE_ARCH}}
 
 PKGNAME =		rust-${V}
 PKGNAME-main =		rust-${V}
-PKGNAME-doc =		rust-doc-${V}
 PKGNAME-gdb =		rust-gdb-${V}
 PKGNAME-clippy =	rust-clippy-${V}
 PKGNAME-rustfmt =	rust-rustfmt-${V}
 
-MULTI_PACKAGES =	-main -doc -gdb -clippy -rustfmt
+MULTI_PACKAGES =	-main -gdb -clippy -rustfmt
 
 CATEGORIES =		lang
 
@@ -45,7 +44,6 @@ MAINTAINER =		Sebastien Marie <semarie@online.fr>
 PERMIT_PACKAGE_CDROM =	Yes
 
 WANTLIB-main =		${COMPILER_LIBCXX} c crypto curl git2 m pthread ssh2 ssl z
-WANTLIB-doc =
 WANTLIB-gdb =
 WANTLIB-clippy =	c c++abi m pthread
 WANTLIB-rustfmt =	c c++abi m pthread
@@ -79,16 +77,13 @@ SUPDISTFILES +=		${BOOTSTRAP-$m}
 # per MACHINE_ARCH configuration
 .if "${MACHINE_ARCH}" == "aarch64"
 TRIPLE_ARCH =		aarch64-unknown-openbsd
-PKG_ARGS +=		-Daarch64=1 -Damd64=0 -Di386=0
 .elif "${MACHINE_ARCH}" == "amd64"
 TRIPLE_ARCH =		x86_64-unknown-openbsd
-PKG_ARGS +=		-Daarch64=0 -Damd64=1 -Di386=0
 .elif "${MACHINE_ARCH}" == "i386"
 TRIPLE_ARCH =		i686-unknown-openbsd
-PKG_ARGS +=		-Daarch64=0 -Damd64=0 -Di386=1
-.else
-PKG_ARGS +=		-Daarch64=0 -Damd64=0 -Di386=0
 .endif
+
+SUBST_VARS +=		TRIPLE_ARCH
 
 MODULES +=		lang/python \
 			gnu
@@ -160,6 +155,7 @@ do-configure:
 	echo 'gdb = "${LOCALBASE}/bin/egdb"' >>${WRKBUILD}/config.toml
 	echo 'vendor = true' >>${WRKBUILD}/config.toml
 	echo 'extended = true' >>${WRKBUILD}/config.toml
+	echo 'docs = false' >>${WRKBUILD}/config.toml
 	echo 'verbose = 2' >>${WRKBUILD}/config.toml
 
 	echo '[install]' >>${WRKBUILD}/config.toml
@@ -191,10 +187,10 @@ TEST_BIN = cd ${WRKBUILD} && exec ${SETENV} ${MAKE_ENV} ${TEST_ENV} \
 
 do-build:
 	${BUILD_BIN} dist --jobs=${MAKE_JOBS} \
-		src/libstd src/librustc src/doc cargo clippy rustfmt
+		src/libstd src/librustc cargo clippy rustfmt
 	rm -rf -- ${WRKBUILD}/build/tmp/dist
 
-COMPONENTS ?=	rustc-${V} rust-std-${V} rust-docs-${V} cargo-${CARGO_V} \
+COMPONENTS ?=	rustc-${V} rust-std-${V} cargo-${CARGO_V} \
 		clippy-${CLIPPY_V} rustfmt-${RUSTFMT_V}
 do-install:
 	rm -rf ${WRKBUILD}/_extractdist
