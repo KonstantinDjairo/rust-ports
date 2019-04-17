@@ -1,4 +1,4 @@
-@comment $OpenBSD: PFRAG.aarch64-doc,v 1.5 2019/01/22 05:07:19 semarie Exp $
+@comment $OpenBSD: PFRAG.aarch64-doc,v 1.6 2019/04/17 06:55:59 semarie Exp $
 share/doc/rust/html/core/arch/aarch64/_clz_u16.v.html
 share/doc/rust/html/core/arch/aarch64/_clz_u32.v.html
 share/doc/rust/html/core/arch/aarch64/_clz_u8.v.html
