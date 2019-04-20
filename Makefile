@@ -22,7 +22,7 @@ DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
 BV-aarch64 =		1.34.0-20190411
-BV-amd64 =		1.34.0-20190413
+BV-amd64 =		1.34.0-20190420
 BV-i386 =		1.34.0-20190409
 BV =			${BV-${MACHINE_ARCH}}
 
@@ -240,7 +240,7 @@ bootstrap: build
 		COMPONENTS="rustc-${V} rust-std-${V} cargo-${CARGO_V}" \
 		FAKE_SETUP=""
 	${_PBUILD} rm -rf ${BOOTSTRAPDIR}/{man,share} \
-		${BOOTSTRAPDIR}/bin/rust-gdb
+		${BOOTSTRAPDIR}/bin/rust-gdb*
 	${_PBUILD} strip ${BOOTSTRAPDIR}/lib/lib*.so \
 		${BOOTSTRAPDIR}/lib/rustlib/${TRIPLE_ARCH}/lib/lib*.so
 .for _bin in rustc rustdoc cargo
