@@ -83,7 +83,8 @@ TRIPLE_ARCH =		x86_64-unknown-openbsd
 TRIPLE_ARCH =		i686-unknown-openbsd
 .endif
 
-SUBST_VARS +=		TRIPLE_ARCH
+SUBST_VARS +=		TRIPLE_ARCH \
+			V
 
 MODULES +=		lang/python \
 			gnu
