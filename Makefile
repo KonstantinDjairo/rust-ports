@@ -1,4 +1,4 @@
-# $OpenBSD: Makefile,v 1.95 2019/04/27 08:50:18 semarie Exp $
+# $OpenBSD: Makefile,v 1.96 2019/05/15 06:10:24 semarie Exp $
 
 ONLY_FOR_ARCHS =	${RUST_ARCHS}
 
