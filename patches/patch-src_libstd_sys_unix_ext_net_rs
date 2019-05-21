@@ -40,12 +40,12 @@ Index: src/libstd/sys/unix/ext/net.rs
      /// use std::time::Duration;
      ///
 @@ -1484,7 +1484,7 @@ mod test {
-     use thread;
-     use io::{self, ErrorKind};
-     use io::prelude::*;
--    use time::Duration;
-+    //use time::Duration;
-     use sys_common::io::test::tmpdir;
+     use crate::thread;
+     use crate::io::{self, ErrorKind};
+     use crate::io::prelude::*;
+-    use crate::time::Duration;
++    //use crate::time::Duration;
+     use crate::sys_common::io::test::tmpdir;
  
      use super::*;
 @@ -1499,6 +1499,7 @@ mod test {

@@ -13,8 +13,8 @@ COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
-V =			1.34.2
-CARGO_V =		0.35.0
+V =			1.35.0
+CARGO_V =		0.36.0
 CLIPPY_V =		0.0.212
 RUSTFMT_V =		1.0.3
 DISTNAME =		rustc-${V}-src
