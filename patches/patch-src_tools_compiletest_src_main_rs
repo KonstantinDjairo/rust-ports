@@ -1,4 +1,4 @@
-$OpenBSD$
+$OpenBSD: patch-src_tools_compiletest_src_main_rs,v 1.5 2019/05/24 04:28:24 semarie Exp $
 workaround https://github.com/rust-lang/rust/pull/58689 when testing with 1.35
 patch from https://github.com/laumann/compiletest-rs/pull/160
 

@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_libstd_sys_unix_ext_net_rs,v 1.13 2019/04/17 06:55:59 semarie Exp $
+$OpenBSD: patch-src_libstd_sys_unix_ext_net_rs,v 1.14 2019/05/24 04:28:24 semarie Exp $
 Disable some failing tests (related to unix socket). Needs more investigation.
 Index: src/libstd/sys/unix/ext/net.rs
 --- src/libstd/sys/unix/ext/net.rs.orig
