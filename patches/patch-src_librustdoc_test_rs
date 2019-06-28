@@ -3,7 +3,7 @@ fallback to LOCALBASE as default sysroot.
 Index: src/librustdoc/test.rs
 --- src/librustdoc/test.rs.orig
 +++ src/librustdoc/test.rs
-@@ -184,7 +184,10 @@ fn run_test(test: &str, cratename: &str, filename: &Fi
+@@ -193,7 +193,10 @@ fn run_test(test: &str, cratename: &str, filename: &Fi
  
      let sessopts = config::Options {
          maybe_sysroot: maybe_sysroot.or_else(

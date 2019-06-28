@@ -13,10 +13,10 @@ COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
-V =			1.35.0
-CARGO_V =		0.36.0
+V =			1.36.0
+CARGO_V =		0.37.0
 CLIPPY_V =		0.0.212
-RUSTFMT_V =		1.2.0
+RUSTFMT_V =		1.2.2
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
@@ -30,10 +30,6 @@ PKGNAME-main =		rust-${V}
 PKGNAME-gdb =		rust-gdb-${V}
 PKGNAME-clippy =	rust-clippy-${V}
 PKGNAME-rustfmt =	rust-rustfmt-${V}
-REVISION-clippy =	0
-REVISION-gdb =		0
-REVISION-main =		0
-REVISION-rustfmt =	0
 
 MULTI_PACKAGES =	-main -gdb -clippy -rustfmt
 
