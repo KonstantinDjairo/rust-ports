@@ -40,7 +40,7 @@ MAINTAINER =		Sebastien Marie <semarie@online.fr>
 
 # both MIT and Apache2.0
 # with portions covered by various BSD-like licenses
-PERMIT_PACKAGE_CDROM =	Yes
+PERMIT_PACKAGE =	Yes
 
 WANTLIB-main =		${COMPILER_LIBCXX} c crypto curl git2 m pthread ssh2 ssl z
 WANTLIB-gdb =
