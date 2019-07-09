@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_bootstrap_lib_rs,v 1.21 2019/05/24 04:28:24 semarie Exp $
+$OpenBSD: patch-src_bootstrap_lib_rs,v 1.22 2019/07/09 11:24:28 semarie Exp $
 let us compilation choice to be honored.
 https://github.com/rust-lang/rust/issues/39900
 Index: src/bootstrap/lib.rs

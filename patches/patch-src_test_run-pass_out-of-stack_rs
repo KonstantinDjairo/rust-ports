@@ -1,4 +1,4 @@
-$OpenBSD$
+$OpenBSD: patch-src_test_run-pass_out-of-stack_rs,v 1.4 2019/07/09 11:24:28 semarie Exp $
 
 Index: src/test/run-pass/out-of-stack.rs
 --- src/test/run-pass/out-of-stack.rs.orig
