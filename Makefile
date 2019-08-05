@@ -72,8 +72,9 @@ BOOTSTRAP-$m =		rustc-bootstrap-${m}-${BV-$m}${EXTRACT_SUFX}:0
 SUPDISTFILES +=		${BOOTSTRAP-$m}
 .endfor
 
-.if !empty(CLANG_ARCHS:M${MACHINE_ARCH})
-# base-clang or ports-clang should be fine: we need devel/llvm only for libs.
+.if ${PROPERTIES:Mclang}
+# on arches where the base compiler is clang.
+# base-clang or ports-clang should be fine: we need devel/llvm only for libs
 COMPILER =		base-clang
 .else
 # use ports-gcc as llvm libraries depends on libestdc++.so and libgcc.a
