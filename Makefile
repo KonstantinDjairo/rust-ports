@@ -18,6 +18,7 @@ CARGO_V =		0.37.0
 CLIPPY_V =		0.0.212
 RUSTFMT_V =		1.2.2
 DISTNAME =		rustc-${V}-src
+REVISION =		0
 
 # rustc bootstrap version
 BV-aarch64 =		1.36.0-20190703
