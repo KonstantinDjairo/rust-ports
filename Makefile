@@ -1,6 +1,6 @@
 # $OpenBSD: Makefile,v 1.98 2019/06/25 20:25:21 sthen Exp $
 
-ONLY_FOR_ARCHS =	${RUST_ARCHS}
+ONLY_FOR_ARCHS =	${RUST_ARCHS} sparc64
 
 .if "${MACHINE_ARCH}" == "i386"
 DPB_PROPERTIES =	lonesome
@@ -23,6 +23,7 @@ DISTNAME =		rustc-${V}-src
 BV-aarch64 =		1.36.0-20190703
 BV-amd64 =		1.36.0-20190630
 BV-i386 =		1.36.0-20190630
+BV-sparc64 =		1.36.0-20190804
 BV =			${BV-${MACHINE_ARCH}}
 
 PKGNAME =		rust-${V}
@@ -47,9 +48,6 @@ WANTLIB-gdb =
 WANTLIB-clippy =	c c++abi m pthread
 WANTLIB-rustfmt =	c c++abi m pthread
 
-# XXX should this actually just be ports-clang?
-COMPILER =		base-clang
-
 MASTER_SITES =		https://static.rust-lang.org/dist/ \
 			https://dev-static.rust-lang.org/dist/
 MASTER_SITES0 =		http://kapouay.odns.fr/pub/rust/
@@ -73,6 +71,14 @@ BOOTSTRAP-$m =		rustc-bootstrap-${m}-${BV-$m}${EXTRACT_SUFX}:0
 SUPDISTFILES +=		${BOOTSTRAP-$m}
 .endfor
 
+.if !empty(CLANG_ARCHS:M${MACHINE_ARCH})
+# base-clang or ports-clang should be fine: we need devel/llvm only for libs.
+COMPILER =		base-clang
+.else
+# use ports-gcc as llvm libraries depends on libestdc++.so and libgcc.a
+COMPILER =		ports-gcc
+.endif
+
 # per MACHINE_ARCH configuration
 .if "${MACHINE_ARCH}" == "aarch64"
 TRIPLE_ARCH =		aarch64-unknown-openbsd
@@ -80,6 +86,8 @@ TRIPLE_ARCH =		aarch64-unknown-openbsd
 TRIPLE_ARCH =		x86_64-unknown-openbsd
 .elif "${MACHINE_ARCH}" == "i386"
 TRIPLE_ARCH =		i686-unknown-openbsd
+.elif "${MACHINE_ARCH}" == "sparc64"
+TRIPLE_ARCH =		sparc64-unknown-openbsd
 .endif
 
 SUBST_VARS +=		TRIPLE_ARCH \
@@ -180,6 +188,7 @@ do-configure:
 	echo '[target.${TRIPLE_ARCH}]' >>${WRKBUILD}/config.toml
 	echo 'llvm-config = "${LOCALBASE}/bin/llvm-config"' \
 		>>${WRKBUILD}/config.toml
+
 
 BUILD_BIN = cd ${WRKBUILD} && exec ${SETENV} ${MAKE_ENV} \
 	    ${MODPY_BIN} ${WRKSRC}/x.py

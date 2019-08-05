@@ -1,0 +1,25 @@
+$OpenBSD$
+use the attribute repr(transparent) over the repr(C) attribute for the single-field bitflags structs in in order to prevent ABI mismatches (sparc64).
+backport https://github.com/rust-lang/rust/pull/61881
+
+Index: src/librustc_codegen_llvm/llvm/ffi.rs
+--- src/librustc_codegen_llvm/llvm/ffi.rs.orig
++++ src/librustc_codegen_llvm/llvm/ffi.rs
+@@ -564,7 +564,7 @@ pub mod debuginfo {
+ 
+     // These values **must** match with LLVMRustDIFlags!!
+     bitflags! {
+-        #[repr(C)]
++        #[repr(transparent)]
+         #[derive(Default)]
+         pub struct DIFlags: ::libc::uint32_t {
+             const FlagZero                = 0;
+@@ -593,7 +593,7 @@ pub mod debuginfo {
+ 
+     // These values **must** match with LLVMRustDISPFlags!!
+     bitflags! {
+-        #[repr(C)]
++        #[repr(transparent)]
+         #[derive(Default)]
+         pub struct DISPFlags: ::libc::uint32_t {
+             const SPFlagZero              = 0;
