@@ -105,7 +105,8 @@ BUILD_DEPENDS +=	devel/llvm
 BUILD_DEPENDS +=	devel/ninja
 BUILD_DEPENDS +=	devel/gdb
 
-LIB_DEPENDS-main +=	devel/libgit2/libgit2 \
+LIB_DEPENDS-main +=	${LIB_DEPENDS} \
+			devel/libgit2/libgit2 \
 			net/curl \
 			security/libssh2
 
