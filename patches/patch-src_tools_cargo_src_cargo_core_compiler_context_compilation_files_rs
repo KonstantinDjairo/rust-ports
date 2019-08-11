@@ -5,7 +5,7 @@ Use an environment variable to use alternate method.
 Index: src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
 --- src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs.orig
 +++ src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
-@@ -468,6 +468,30 @@ fn compute_metadata<'a, 'cfg>(
+@@ -468,6 +468,27 @@ fn compute_metadata<'a, 'cfg>(
  
      let mut hasher = SipHasher::new_with_keys(0, 0);
  
@@ -16,14 +16,11 @@ Index: src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
 +        format!("{}", unit.pkg.package_id().name()).hash(&mut hasher);
 +        format!("{}", unit.pkg.package_id().version()).hash(&mut hasher);
 +
-+        let mut deps_metadata = cx
-+            .dep_targets(unit)
-+            .iter()
-+            .map(|dep| metadata_of(dep, cx, metas))
-+            .collect::<Vec<_>>();
-+        deps_metadata.sort();
-+        for dep in deps_metadata {
-+            dep.hash(&mut hasher);
++        let mut dep_targets = cx.dep_targets(unit);
++        dep_targets.sort();
++        for dep in dep_targets {
++            format!("{}", dep.pkg.package_id().name()).hash(&mut hasher);
++            format!("{}", dep.pkg.package_id().version()).hash(&mut hasher);
 +        }
 +
 +        if let Ok(ref channel) = __cargo_default_lib_metadata {
