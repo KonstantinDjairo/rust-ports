@@ -16,7 +16,7 @@ COMMENT-rustfmt =	Rust code formatter
 V =			1.37.0
 CARGO_V =		0.38.0
 CLIPPY_V =		0.0.212
-RUSTFMT_V =		1.2.2
+RUSTFMT_V =		1.3.0
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
