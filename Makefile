@@ -23,7 +23,7 @@ DISTNAME =		rustc-${V}-src
 BV-aarch64 =		1.36.0-20190703
 BV-amd64 =		1.37.0-20190813
 BV-i386 =		1.37.0-20190813
-BV-sparc64 =		1.36.0-20190804
+BV-sparc64 =		1.37.0-20190813
 BV =			${BV-${MACHINE_ARCH}}
 
 PKGNAME =		rust-${V}
