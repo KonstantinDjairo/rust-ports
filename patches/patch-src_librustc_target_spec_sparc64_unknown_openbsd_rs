@@ -1,5 +1,6 @@
 $OpenBSD$
 add sparc64-unknown-openbsd definition
+https://github.com/rust-lang/rust/pull/63595
 
 Index: src/librustc_target/spec/sparc64_unknown_openbsd.rs
 --- src/librustc_target/spec/sparc64_unknown_openbsd.rs.orig

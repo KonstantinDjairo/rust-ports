@@ -191,7 +191,6 @@ do-configure:
 	echo 'llvm-config = "${LOCALBASE}/bin/llvm-config"' \
 		>>${WRKBUILD}/config.toml
 
-
 BUILD_BIN = cd ${WRKBUILD} && exec ${SETENV} ${MAKE_ENV} \
 	    ${MODPY_BIN} ${WRKSRC}/x.py
 TEST_BIN = cd ${WRKBUILD} && exec ${SETENV} ${MAKE_ENV} ${TEST_ENV} \

@@ -1,5 +1,6 @@
 $OpenBSD$
 define sparc64 on libc
+https://github.com/rust-lang/libc/pull/1470
 
 Index: vendor/libc/src/unix/bsd/netbsdlike/openbsdlike/openbsd/mod.rs
 --- vendor/libc/src/unix/bsd/netbsdlike/openbsdlike/openbsd/mod.rs.orig

@@ -1,5 +1,6 @@
 $OpenBSD$
-define sparc64 on libc
+define sparc64 on libc (the patch is minimal to avoid too intrusive changes)
+part of https://github.com/rust-lang/libc/pull/1470
 
 Index: vendor/libc/src/unix/bsd/netbsdlike/openbsdlike/openbsd/sparc64.rs
 --- vendor/libc/src/unix/bsd/netbsdlike/openbsdlike/openbsd/sparc64.rs.orig
