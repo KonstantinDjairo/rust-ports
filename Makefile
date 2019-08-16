@@ -2,8 +2,6 @@
 
 ONLY_FOR_ARCHS =	${RUST_ARCHS} sparc64
 
-BROKEN-sparc64 =	others ports needs rust libc update
-
 .if "${MACHINE_ARCH}" == "i386"
 DPB_PROPERTIES =	lonesome
 .else
