@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_tools_cargo_src_cargo_core_compiler_context_compilation_files_rs,v 1.6 2019/07/09 11:24:28 semarie Exp $
+$OpenBSD: patch-src_tools_cargo_src_cargo_core_compiler_context_compilation_files_rs,v 1.7 2019/08/16 18:14:21 semarie Exp $
 For port tree, use a custom metadata generation method to have stable hash between archs.
 Use an environment variable to use alternate method.
 

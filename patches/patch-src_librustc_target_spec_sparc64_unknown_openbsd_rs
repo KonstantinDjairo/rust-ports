@@ -1,4 +1,4 @@
-$OpenBSD$
+$OpenBSD: patch-src_librustc_target_spec_sparc64_unknown_openbsd_rs,v 1.1 2019/08/16 18:14:21 semarie Exp $
 add sparc64-unknown-openbsd definition
 https://github.com/rust-lang/rust/pull/63595
 
