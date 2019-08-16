@@ -71,15 +71,6 @@ BOOTSTRAP-$m =		rustc-bootstrap-${m}-${BV-$m}${EXTRACT_SUFX}:0
 SUPDISTFILES +=		${BOOTSTRAP-$m}
 .endfor
 
-.if ${PROPERTIES:Mclang}
-# on arches where the base compiler is clang.
-# base-clang or ports-clang should be fine: we need devel/llvm only for libs
-COMPILER =		base-clang
-.else
-# use ports-gcc as llvm libraries depends on libestdc++.so and libgcc.a
-COMPILER =		ports-gcc
-.endif
-
 # per MACHINE_ARCH configuration
 .if "${MACHINE_ARCH}" == "aarch64"
 TRIPLE_ARCH =		aarch64-unknown-openbsd
@@ -93,6 +84,11 @@ TRIPLE_ARCH =		sparc64-unknown-openbsd
 
 SUBST_VARS +=		TRIPLE_ARCH \
 			V
+
+# on arches where the base compiler is clang: base-clang or ports-clang should be fine,
+# as we need devel/llvm only for libs.
+# on others archs, use ports-gcc as llvm libraries depends on libestdc++.so and libgcc.a.
+COMPILER =		base-clang ports-gcc
 
 MODULES +=		lang/python \
 			gnu

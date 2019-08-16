@@ -9,7 +9,6 @@
 /patch-src_libstd_sys_unix_ext_net_rs/1.14/Fri May 24 04:28:24 2019//
 /patch-src_bootstrap_lib_rs/1.22/Tue Jul  9 11:24:28 2019//
 /patch-src_bootstrap_test_rs/1.2/Tue Jul  9 11:24:28 2019//
-/patch-src_librustdoc_test_rs/1.23/Tue Jul  9 11:24:28 2019//
 /patch-src_libstd_sys_unix_os_rs/1.12/Tue Jul  9 11:24:28 2019//
 /patch-src_libstd_sys_unix_stack_overflow_rs/1.5/Tue Jul  9 11:24:28 2019//
 /patch-src_test_run-pass_out-of-stack_rs/1.4/Tue Jul  9 11:24:28 2019//
@@ -23,4 +22,5 @@
 /patch-src_libunwind_build_rs/0/dummy timestamp//
 /patch-vendor_libc_src_unix_bsd_netbsdlike_openbsdlike_openbsd_mod_rs/0/dummy timestamp//
 /patch-vendor_libc_src_unix_bsd_netbsdlike_openbsdlike_openbsd_sparc64_rs/0/dummy timestamp//
+/patch-src_librustdoc_test_rs/-1.23/dummy timestamp//
 D
