@@ -4,12 +4,12 @@ try to reduce memory usage on aarch64:
 Index: src/bootstrap/bin/rustc.rs
 --- src/bootstrap/bin/rustc.rs.orig
 +++ src/bootstrap/bin/rustc.rs
-@@ -206,6 +206,11 @@ fn main() {
+@@ -222,6 +222,11 @@ fn main() {
              cmd.arg("-C").arg(format!("codegen-units={}", s));
          }
  
 +        if target.contains("aarch64-unknown-openbsd")
-+            && crate_name == "rustc" {
++            && crate_name == Some("rustc") {
 +            cmd.arg("-Z").arg("fewer-names");
 +        }
 +

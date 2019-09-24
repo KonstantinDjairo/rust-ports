@@ -5,7 +5,7 @@ https://github.com/rust-lang/rust/pull/63595
 Index: src/librustc_llvm/build.rs
 --- src/librustc_llvm/build.rs.orig
 +++ src/librustc_llvm/build.rs
-@@ -253,8 +253,11 @@ fn main() {
+@@ -250,8 +250,11 @@ fn main() {
      let llvm_use_libcxx = env::var_os("LLVM_USE_LIBCXX");
  
      let stdcppname = if target.contains("openbsd") {
