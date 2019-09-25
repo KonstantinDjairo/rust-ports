@@ -22,7 +22,7 @@ DISTNAME =		rustc-${V}-src
 # rustc bootstrap version
 BV-aarch64 =		1.37.0-20190815
 BV-amd64 =		1.38.0-20190924
-BV-i386 =		1.37.0-20190813
+BV-i386 =		1.38.0-20190924
 BV-sparc64 =		1.37.0-20190813
 BV =			${BV-${MACHINE_ARCH}}
 
