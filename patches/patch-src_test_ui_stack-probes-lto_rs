@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_test_ui_stack-probes-lto_rs,v 1.5 2019/07/09 11:24:28 semarie Exp $
+$OpenBSD: patch-src_test_ui_stack-probes-lto_rs,v 1.1 2019/09/29 08:23:17 semarie Exp $
 Disable stack-probes test (MAP_STACK terminate the process in a way the testsuite fails).
 Index: src/test/ui/stack-probes-lto.rs
 --- src/test/ui/stack-probes-lto.rs.orig

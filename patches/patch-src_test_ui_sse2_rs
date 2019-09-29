@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_test_ui_sse2_rs,v 1.5 2019/03/11 19:13:40 semarie Exp $
+$OpenBSD: patch-src_test_ui_sse2_rs,v 1.1 2019/09/29 08:23:17 semarie Exp $
 Disable SSE2 tests for i386.
 Index: src/test/ui/sse2.rs
 --- src/test/ui/sse2.rs.orig

@@ -1,4 +1,4 @@
-$OpenBSD$
+$OpenBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_openbsd_sparc64_rs,v 1.1 2019/09/29 08:23:17 semarie Exp $
 define sparc64 on libc (the patch is minimal to avoid too intrusive changes)
 part of https://github.com/rust-lang/libc/pull/1470
 

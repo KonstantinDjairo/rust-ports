@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_test_ui_out-of-stack_rs,v 1.4 2019/07/09 11:24:28 semarie Exp $
+$OpenBSD: patch-src_test_ui_out-of-stack_rs,v 1.1 2019/09/29 08:23:17 semarie Exp $
 
 Index: src/test/ui/out-of-stack.rs
 --- src/test/ui/out-of-stack.rs.orig
