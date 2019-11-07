@@ -13,10 +13,10 @@ COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
-V =			1.38.0
-CARGO_V =		0.39.0
+V =			1.39.0
+CARGO_V =		0.40.0
 CLIPPY_V =		0.0.212
-RUSTFMT_V =		1.4.4
+RUSTFMT_V =		1.4.8
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
@@ -138,7 +138,7 @@ SUBST_VARS +=	WRKBUILD
 post-patch:
 	sed -i 's/"files":{[^}]*}/"files":{}/' \
 		${WRKSRC}/vendor/*/.cargo-checksum.json
-	${SUBST_CMD} ${WRKSRC}/src/tools/cargo/tests/testsuite/support/paths.rs
+	${SUBST_CMD} ${WRKSRC}/src/tools/cargo/crates/cargo-test-support/src/paths.rs
 
 # - check datasize limit before configuring (and building)
 pre-configure:
