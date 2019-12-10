@@ -1,4 +1,4 @@
-$OpenBSD$
+$OpenBSD: patch-src_bootstrap_builder_rs,v 1.7 2019/12/10 07:32:42 semarie Exp $
 Fix rustdoc build
 https://github.com/rust-lang/rust/commit/73369f32621f6a844a80a8513ae3ded901e4a406
 Index: src/bootstrap/builder.rs

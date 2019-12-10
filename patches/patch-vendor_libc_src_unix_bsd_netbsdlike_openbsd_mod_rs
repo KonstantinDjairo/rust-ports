@@ -1,4 +1,4 @@
-$OpenBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_openbsd_mod_rs,v 1.1 2019/09/29 08:23:17 semarie Exp $
+$OpenBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_openbsd_mod_rs,v 1.2 2019/12/10 07:32:42 semarie Exp $
 define sparc64 on libc
 https://github.com/rust-lang/libc/pull/1470
 
