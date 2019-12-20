@@ -5,7 +5,7 @@ Use an environment variable to use alternate method.
 Index: src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
 --- src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs.orig
 +++ src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
-@@ -504,6 +504,27 @@ fn compute_metadata<'a, 'cfg>(
+@@ -507,6 +507,27 @@ fn compute_metadata<'a, 'cfg>(
  
      let mut hasher = SipHasher::new_with_keys(0, 0);
  
