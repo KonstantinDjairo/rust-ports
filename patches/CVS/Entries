@@ -9,16 +9,16 @@
 /patch-src_test_ui_out-of-stack_rs/1.1/Sun Sep 29 08:23:17 2019//
 /patch-src_test_ui_sse2_rs/1.1/Sun Sep 29 08:23:17 2019//
 /patch-src_tools_cargo_src_cargo_core_compiler_context_compilation_files_rs/1.8/Sun Sep 29 08:23:17 2019//
-/patch-vendor_libc_src_unix_bsd_netbsdlike_openbsd_sparc64_rs/1.1/Sun Sep 29 08:23:17 2019//
 /patch-src_librustc_target_spec_i686_unknown_openbsd_rs/1.4/Sun Dec  8 10:50:52 2019//
 /patch-src_bootstrap_bin_rustc_rs/1.13/Tue Dec 10 07:32:42 2019//
 /patch-src_bootstrap_bootstrap_py/1.1/Tue Dec 10 07:32:42 2019//
-/patch-src_bootstrap_builder_rs/1.7/Tue Dec 10 07:32:42 2019//
 /patch-src_bootstrap_lib_rs/1.25/Tue Dec 10 07:32:42 2019//
 /patch-src_bootstrap_test_rs/1.5/Tue Dec 10 07:32:42 2019//
 /patch-src_test_ui_abi_stack-probes-lto_rs/1.1/Tue Dec 10 07:32:42 2019//
 /patch-src_test_ui_abi_stack-probes_rs/1.1/Tue Dec 10 07:32:42 2019//
 /patch-src_tools_cargo_crates_cargo-test-support_src_paths_rs/1.1/Tue Dec 10 07:32:42 2019//
-/patch-vendor_libc_src_unix_bsd_netbsdlike_openbsd_mod_rs/1.2/Tue Dec 10 07:32:42 2019//
 /patch-vendor_libgit2-sys_lib_rs/1.2/Tue Dec 10 07:32:42 2019//
+/patch-src_bootstrap_builder_rs/-1.7/dummy timestamp//
+/patch-vendor_libc_src_unix_bsd_netbsdlike_openbsd_mod_rs/-1.2/dummy timestamp//
+/patch-vendor_libc_src_unix_bsd_netbsdlike_openbsd_sparc64_rs/-1.1/dummy timestamp//
 D
