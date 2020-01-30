@@ -32,8 +32,6 @@ PKGNAME-gdb =		rust-gdb-${V}
 PKGNAME-clippy =	rust-clippy-${V}
 PKGNAME-rustfmt =	rust-rustfmt-${V}
 
-REVISION-main =		0
-
 MULTI_PACKAGES =	-main -gdb -clippy -rustfmt
 
 CATEGORIES =		lang
