@@ -1,16 +1,26 @@
 $OpenBSD: patch-src_bootstrap_bootstrap_py,v 1.1 2019/12/10 07:32:42 semarie Exp $
 Workaround for sparc64: bootstrap segfaults without -O3
-
+Use 'i586-unknown-openbsd' for i386
 Index: src/bootstrap/bootstrap.py
 --- src/bootstrap/bootstrap.py.orig
 +++ src/bootstrap/bootstrap.py
-@@ -662,6 +662,9 @@ class RustBuild(object):
+@@ -232,6 +232,9 @@ def default_build_triple():
+     if cputype == 'powerpc' and ostype == 'unknown-freebsd':
+         cputype = subprocess.check_output(
+               ['uname', '-p']).strip().decode(default_encoding)
++    elif cputype == 'i386' and ostype == 'unknown-openbsd':
++    	return 'i586-unknown-openbsd'
++
+     cputype_mapper = {
+         'BePC': 'i686',
+         'aarch64': 'aarch64',
+@@ -661,6 +664,9 @@ class RustBuild(object):
+         env["RUSTFLAGS"] += " -Wrust_2018_idioms -Wunused_lifetimes"
          if self.get_toml("deny-warnings", "rust") != "false":
              env["RUSTFLAGS"] += " -Dwarnings"
- 
++
 +        if self.build_triple() == "sparc64-unknown-openbsd":
 +            env["RUSTFLAGS"] += "-Copt-level=3 "
-+
+ 
          env["PATH"] = os.path.join(self.bin_root(), "bin") + \
              os.pathsep + env["PATH"]
-         if not os.path.isfile(self.cargo()):
