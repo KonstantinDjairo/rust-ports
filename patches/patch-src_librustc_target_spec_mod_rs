@@ -1,0 +1,13 @@
+$OpenBSD$
+
+Index: src/librustc_target/spec/mod.rs
+--- src/librustc_target/spec/mod.rs.orig
++++ src/librustc_target/spec/mod.rs
+@@ -401,6 +401,7 @@ supported_targets! {
+     ("x86_64-unknown-dragonfly", x86_64_unknown_dragonfly),
+ 
+     ("aarch64-unknown-openbsd", aarch64_unknown_openbsd),
++    ("i586-unknown-openbsd", i586_unknown_openbsd),
+     ("i686-unknown-openbsd", i686_unknown_openbsd),
+     ("sparc64-unknown-openbsd", sparc64_unknown_openbsd),
+     ("x86_64-unknown-openbsd", x86_64_unknown_openbsd),

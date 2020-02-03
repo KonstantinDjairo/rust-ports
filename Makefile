@@ -22,7 +22,7 @@ DISTNAME =		rustc-${V}-src
 # rustc bootstrap version
 BV-aarch64 =		1.41.0-20200201
 BV-amd64 =		1.41.0-20200130
-BV-i386 =		1.41.0-20200131
+BV-i386 =		1.41.0-20200203
 BV-sparc64 =		1.40.0-20200110
 BV =			${BV-${MACHINE_ARCH}}
 
@@ -77,7 +77,7 @@ TRIPLE_ARCH =		aarch64-unknown-openbsd
 .elif "${MACHINE_ARCH}" == "amd64"
 TRIPLE_ARCH =		x86_64-unknown-openbsd
 .elif "${MACHINE_ARCH}" == "i386"
-TRIPLE_ARCH =		i686-unknown-openbsd
+TRIPLE_ARCH =		i586-unknown-openbsd
 .elif "${MACHINE_ARCH}" == "sparc64"
 TRIPLE_ARCH =		sparc64-unknown-openbsd
 .endif
