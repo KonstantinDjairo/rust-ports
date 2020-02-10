@@ -9,7 +9,7 @@ Index: src/bootstrap/bootstrap.py
              env["RUSTFLAGS"] += " -Dwarnings"
  
 +        if self.build_triple() == "sparc64-unknown-openbsd":
-+            env["RUSTFLAGS"] += "-Copt-level=3 "
++            env["RUSTFLAGS"] += " -Copt-level=3"
 +
          env["PATH"] = os.path.join(self.bin_root(), "bin") + \
              os.pathsep + env["PATH"]
