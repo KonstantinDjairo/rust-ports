@@ -92,6 +92,8 @@ COMPILER =		base-clang ports-gcc
 
 MODULES +=		lang/python \
 			gnu
+
+MODPY_VERSION =		${MODPY_DEFAULT_VERSION_3}
 MODPY_RUNDEP =		No
 
 BUILD_DEPENDS +=	devel/cmake
