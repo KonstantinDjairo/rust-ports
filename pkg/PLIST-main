@@ -10,10 +10,11 @@
 @so lib/libtest-b18d3ed20be013b9.so
 lib/rustlib/
 lib/rustlib/etc/
+${MODPY_COMMENT}lib/rustlib/etc/${MODPY_PYCACHE}/
+lib/rustlib/etc/${MODPY_PYCACHE}debugger_pretty_printers_common.${MODPY_PYC_MAGIC_TAG}pyc
+@comment lib/rustlib/etc/${MODPY_PYCACHE}lldb_rust_formatters.${MODPY_PYC_MAGIC_TAG}pyc
 lib/rustlib/etc/debugger_pretty_printers_common.py
-lib/rustlib/etc/debugger_pretty_printers_common.pyc
 @comment lib/rustlib/etc/lldb_rust_formatters.py
-@comment lib/rustlib/etc/lldb_rust_formatters.pyc
 lib/rustlib/${TRIPLE_ARCH}/
 lib/rustlib/${TRIPLE_ARCH}/lib/
 lib/rustlib/${TRIPLE_ARCH}/lib/liballoc-b74634df3470a088.rlib
