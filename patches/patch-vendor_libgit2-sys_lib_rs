@@ -34,7 +34,7 @@ Index: vendor/libgit2-sys/lib.rs
          options: *const git_status_options,
      ) -> c_int;
 -    pub fn git_status_list_entrycount(list: *mut git_status_list) -> size_t;
-+    pub fn git_status_list_entrycount(list: *mut git_status_list) -> c_unit;
++    pub fn git_status_list_entrycount(list: *mut git_status_list) -> c_uint;
      pub fn git_status_byindex(
          statuslist: *mut git_status_list,
          idx: size_t,
