@@ -5,9 +5,9 @@ Use an environment variable to use alternate method.
 Index: src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
 --- src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs.orig
 +++ src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
-@@ -527,6 +527,27 @@ fn compute_metadata<'a, 'cfg>(
+@@ -564,6 +564,37 @@ fn compute_metadata<'a, 'cfg>(
  
-     let mut hasher = SipHasher::new_with_keys(0, 0);
+     let mut hasher = SipHasher::new();
  
 +    // Simplified version for OpenBSD port tree
 +    if let Ok(port_version) = env::var("OPENBSD_PORTS_LANG_RUST_VERSION") {
@@ -16,12 +16,22 @@ Index: src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
 +        format!("{}", unit.pkg.package_id().name()).hash(&mut hasher);
 +        format!("{}", unit.pkg.package_id().version()).hash(&mut hasher);
 +
-+        let mut unit_deps = Vec::from(cx.unit_deps(unit));
-+        unit_deps.sort();
-+        for dep in unit_deps {
-+            format!("{}", dep.unit.pkg.package_id().name()).hash(&mut hasher);
-+            format!("{}", dep.unit.pkg.package_id().version()).hash(&mut hasher);
++        let mut deps_metadata = cx
++            .unit_deps(unit)
++            .iter()
++            .map(|dep| metadata_of(&dep.unit, cx, metas))
++            .collect::<Vec<_>>();
++        deps_metadata.sort();
++        deps_metadata.hash(&mut hasher);
++
++        unit.features.hash(&mut hasher);
++        unit.kind.hash(&mut hasher);
++        if cx.is_primary_package(unit) {
++            if let Some(proc) = &cx.bcx.build_config.primary_unit_rustc {
++                proc.get_program().hash(&mut hasher);
++            }
 +        }
++        unit.is_std.hash(&mut hasher);
 +
 +        if let Ok(ref channel) = __cargo_default_lib_metadata {
 +            channel.hash(&mut hasher);

@@ -4,10 +4,10 @@
 @bin bin/cargo
 @bin bin/rustc
 @bin bin/rustdoc
-@so lib/librustc_driver-0f8afada1cdc77c3.so
-@so lib/librustc_macros-af6a77983087350e.so
-@so lib/libstd-1798c3518b8d465c.so
-@so lib/libtest-11674ce3e7eb3a1b.so
+@so lib/librustc_driver-4200febd6997474a.so
+@so lib/librustc_macros-8f083d7bc98ca252.so
+@so lib/libstd-88b136fdcf7c6647.so
+@so lib/libtest-e2c41d4f2232b81c.so
 lib/rustlib/
 lib/rustlib/etc/
 ${MODPY_COMMENT}lib/rustlib/etc/${MODPY_PYCACHE}/
@@ -17,29 +17,29 @@ lib/rustlib/etc/debugger_pretty_printers_common.py
 @comment lib/rustlib/etc/lldb_rust_formatters.py
 lib/rustlib/${TRIPLE_ARCH}/
 lib/rustlib/${TRIPLE_ARCH}/lib/
-lib/rustlib/${TRIPLE_ARCH}/lib/liballoc-7f7e4991aa22e5f1.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libbacktrace-8355db8a05b81036.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libbacktrace_sys-8b9e75cd82871239.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libcfg_if-09611085b4f8341c.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libcompiler_builtins-6787cc231f294a2d.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libcore-6bc2863383253c33.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libgetopts-157ae01eaa20d123.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libhashbrown-b8168f002c4034c9.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/liblibc-46d945a56b64b5f1.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libpanic_abort-bf1d768be129c1f5.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libpanic_unwind-ca823abb225322c9.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libproc_macro-9f7f4610171f96e4.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/librustc_demangle-aa1ffddb60885e2d.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/librustc_std_workspace_alloc-1539813aacdde060.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/librustc_std_workspace_core-5a242419090a602e.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/librustc_std_workspace_std-431220937e4320bf.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libstd-1798c3518b8d465c.rlib
-@so lib/rustlib/${TRIPLE_ARCH}/lib/libstd-1798c3518b8d465c.so
-lib/rustlib/${TRIPLE_ARCH}/lib/libterm-19b5e5f98f4166a6.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libtest-11674ce3e7eb3a1b.rlib
-@so lib/rustlib/${TRIPLE_ARCH}/lib/libtest-11674ce3e7eb3a1b.so
-lib/rustlib/${TRIPLE_ARCH}/lib/libunicode_width-b1e891b2abe53578.rlib
-lib/rustlib/${TRIPLE_ARCH}/lib/libunwind-dfc74083d18944df.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/liballoc-a358362db7a5fa6c.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libbacktrace-71caf61934c5b486.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libbacktrace_sys-32ca63fa68495ec5.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libcfg_if-9e4f04d196520954.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libcompiler_builtins-2e437a47ec0aaf98.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libcore-6fb8f9afd1747e2e.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libgetopts-ce0b5620c8df6151.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libhashbrown-79974bfb898211e8.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/liblibc-656bbf506af8a072.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libpanic_abort-3bb6b4c204560b1f.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libpanic_unwind-e87f8972da33b51a.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libproc_macro-942bb2f16e10678c.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/librustc_demangle-09bc1f5367acbdf3.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/librustc_std_workspace_alloc-ae70e4cb1dfad828.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/librustc_std_workspace_core-e1688d873f560ba5.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/librustc_std_workspace_std-ef41206e2f4e3456.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libstd-88b136fdcf7c6647.rlib
+@so lib/rustlib/${TRIPLE_ARCH}/lib/libstd-88b136fdcf7c6647.so
+lib/rustlib/${TRIPLE_ARCH}/lib/libterm-f916f0bbc50b41fa.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libtest-e2c41d4f2232b81c.rlib
+@so lib/rustlib/${TRIPLE_ARCH}/lib/libtest-e2c41d4f2232b81c.so
+lib/rustlib/${TRIPLE_ARCH}/lib/libunicode_width-794ad49cf75d7f24.rlib
+lib/rustlib/${TRIPLE_ARCH}/lib/libunwind-2e546d47af424a1a.rlib
 @man man/man1/cargo-bench.1
 @man man/man1/cargo-build.1
 @man man/man1/cargo-check.1

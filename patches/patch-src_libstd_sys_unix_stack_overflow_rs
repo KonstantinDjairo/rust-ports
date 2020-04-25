@@ -3,7 +3,7 @@ Use MAP_STACK for stack allocation.
 Index: src/libstd/sys/unix/stack_overflow.rs
 --- src/libstd/sys/unix/stack_overflow.rs.orig
 +++ src/libstd/sys/unix/stack_overflow.rs
-@@ -127,7 +127,8 @@ mod imp {
+@@ -138,7 +138,8 @@ mod imp {
  
      unsafe fn get_stackp() -> *mut libc::c_void {
          let stackp =
