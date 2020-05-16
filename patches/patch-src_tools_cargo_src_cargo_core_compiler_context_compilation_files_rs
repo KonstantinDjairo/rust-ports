@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_tools_cargo_src_cargo_core_compiler_context_compilation_files_rs,v 1.11 2020/03/21 05:23:59 semarie Exp $
+$OpenBSD: patch-src_tools_cargo_src_cargo_core_compiler_context_compilation_files_rs,v 1.12 2020/05/16 14:13:53 semarie Exp $
 For port tree, use a custom metadata to have known-in-advance hashes.
 Use an environment variable to use alternate method.
 
