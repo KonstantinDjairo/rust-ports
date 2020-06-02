@@ -12,7 +12,7 @@ version and adjusting pkg-config check. devel/libgit2 is still at
 Index: vendor/libgit2-sys/lib.rs
 --- vendor/libgit2-sys/lib.rs.orig
 +++ vendor/libgit2-sys/lib.rs
-@@ -364,7 +364,6 @@ pub struct git_remote_callbacks {
+@@ -366,7 +366,6 @@ pub struct git_remote_callbacks {
      pub push_negotiation: git_push_negotiation,
      pub transport: git_transport_cb,
      pub payload: *mut c_void,
@@ -20,7 +20,7 @@ Index: vendor/libgit2-sys/lib.rs
  }
  
  #[repr(C)]
-@@ -421,8 +420,6 @@ pub type git_push_negotiation =
+@@ -423,8 +422,6 @@ pub type git_push_negotiation =
  
  pub type git_push_update_reference_cb =
      Option<extern "C" fn(*const c_char, *const c_char, *mut c_void) -> c_int>;
@@ -29,7 +29,7 @@ Index: vendor/libgit2-sys/lib.rs
  
  #[repr(C)]
  pub struct git_push_update {
-@@ -2033,7 +2030,7 @@ extern "C" {
+@@ -2068,7 +2065,7 @@ extern "C" {
          repo: *mut git_repository,
          options: *const git_status_options,
      ) -> c_int;
