@@ -43,7 +43,7 @@ MAINTAINER =		Sebastien Marie <semarie@online.fr>
 # with portions covered by various BSD-like licenses
 PERMIT_PACKAGE =	Yes
 
-WANTLIB-main =		${COMPILER_LIBCXX} c crypto curl git2 m pthread ssh2 ssl z
+WANTLIB-main =		${COMPILER_LIBCXX} c crypto curl m pthread ssh2 ssl z
 WANTLIB-gdb =
 WANTLIB-clippy =	c c++abi m pthread
 WANTLIB-rustfmt =	c c++abi m pthread
@@ -139,7 +139,6 @@ BUILD_DEPENDS +=	devel/ninja
 BUILD_DEPENDS +=	devel/gdb
 
 LIB_DEPENDS-main +=	${LIB_DEPENDS} \
-			devel/libgit2/libgit2 \
 			net/curl \
 			security/libssh2
 
@@ -150,7 +149,6 @@ RUN_DEPENDS-rustfmt +=	lang/rust,-main
 
 MAKE_ENV +=	CARGO_HOME=${WRKBUILD}/cargo-home \
 		TMPDIR=${WRKBUILD} \
-		LIBGIT2_SYS_USE_PKG_CONFIG=1 \
 		LIBSSH2_SYS_USE_PKG_CONFIG=1
 TEST_ENV +=	RUST_BACKTRACE=0
 
