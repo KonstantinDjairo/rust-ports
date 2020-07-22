@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_bootstrap_test_rs,v 1.10 2020/06/09 06:39:30 semarie Exp $
+$OpenBSD: patch-src_bootstrap_test_rs,v 1.11 2020/07/22 06:59:17 semarie Exp $
 Disable "Bootstrap" test by default (it requires network).
 
 Index: src/bootstrap/test.rs
