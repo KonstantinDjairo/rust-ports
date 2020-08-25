@@ -3,7 +3,7 @@ Use MAP_STACK for stack allocation.
 Index: src/libstd/sys/unix/stack_overflow.rs
 --- src/libstd/sys/unix/stack_overflow.rs.orig
 +++ src/libstd/sys/unix/stack_overflow.rs
-@@ -143,7 +143,7 @@ mod imp {
+@@ -144,7 +144,7 @@ mod imp {
              ptr::null_mut(),
              SIGSTKSZ + page_size(),
              PROT_READ | PROT_WRITE,
