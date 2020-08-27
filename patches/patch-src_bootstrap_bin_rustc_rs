@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_bootstrap_bin_rustc_rs,v 1.14 2020/03/21 05:23:59 semarie Exp $
+$OpenBSD: patch-src_bootstrap_bin_rustc_rs,v 1.15 2020/08/27 17:24:57 semarie Exp $
 try to reduce memory usage on aarch64:
  - reduce memory use by retaining fewer names within compilation artifacts
 Index: src/bootstrap/bin/rustc.rs
