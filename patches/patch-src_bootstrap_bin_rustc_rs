@@ -4,7 +4,7 @@ try to reduce memory usage on aarch64:
 Index: src/bootstrap/bin/rustc.rs
 --- src/bootstrap/bin/rustc.rs.orig
 +++ src/bootstrap/bin/rustc.rs
-@@ -105,6 +105,13 @@ fn main() {
+@@ -104,6 +104,13 @@ fn main() {
          {
              cmd.arg("-C").arg("panic=abort");
          }

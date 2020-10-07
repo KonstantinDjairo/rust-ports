@@ -13,10 +13,10 @@ COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
-V =			1.46.0
-CARGO_V =		0.47.0
+V =			1.47.0
+CARGO_V =		0.48.0
 CLIPPY_V =		0.0.212
-RUSTFMT_V =		1.4.18
+RUSTFMT_V =		1.4.20
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
@@ -73,31 +73,34 @@ SUPDISTFILES +=		${BOOTSTRAP-$m}
 
 # list of libraries with a hash in plist
 # the second field is used to have a different hash for each library
-LIBRUST_WITH_HASHES =	alloc 				01 \
-			backtrace 			02 \
-			backtrace_sys 			03 \
+LIBRUST_WITH_HASHES =	addr2line			01 \
+			adler				02 \
+			alloc 				03 \
 			chalk_derive			04 \
 			cfg_if 				05 \
 			compiler_builtins 		06 \
 			core 				07 \
 			getopts 			08 \
-			hashbrown 			09 \
-			libc 				0a \
-			panic_abort 			0b \
-			panic_unwind 			0c \
-			proc_macro 			0d \
-			rustc_demangle 			0e \
-			rustc_driver 			0f \
-			rustc_macros 			10 \
-			rustc_std_workspace_alloc 	11 \
-			rustc_std_workspace_core 	12 \
-			rustc_std_workspace_std 	13 \
-			std 				14 \
-			term 				15 \
-			test 				16 \
-			tracing_attributes		17 \
-			unicode_width 			18 \
-			unwind				19
+			gimli				09 \
+			hashbrown 			0a \
+			libc 				0b \
+			miniz_oxide			0c \
+			object				0d \
+			panic_abort 			0e \
+			panic_unwind 			0f \
+			proc_macro 			10 \
+			rustc_demangle 			11 \
+			rustc_driver 			12 \
+			rustc_macros 			13 \
+			rustc_std_workspace_alloc 	14 \
+			rustc_std_workspace_core 	15 \
+			rustc_std_workspace_std 	16 \
+			std 				17 \
+			term 				18 \
+			test 				19 \
+			tracing_attributes		20 \
+			unicode_width 			21 \
+			unwind				22
 
 # generate a stable hash mostly conforming to rust expectations
 # (it should change if anything changed)
@@ -232,7 +235,7 @@ TEST_BIN = cd ${WRKBUILD} && exec ${SETENV} ${MAKE_ENV} ${TEST_ENV} \
 
 do-build:
 	${BUILD_BIN} dist --jobs=${MAKE_JOBS} \
-		src/libstd src/librustc cargo clippy rustfmt
+		library/std src/librustc cargo clippy rustfmt
 	rm -rf -- ${WRKBUILD}/build/tmp/dist
 
 COMPONENTS ?=	rustc-${V} rust-std-${V} cargo-${CARGO_V} \
