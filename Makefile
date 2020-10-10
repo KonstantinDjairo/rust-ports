@@ -20,7 +20,7 @@ RUSTFMT_V =		1.4.20
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
-BV-aarch64 =		1.46.0-20200827
+BV-aarch64 =		1.47.0-20201009
 BV-amd64 =		1.47.0-20201007
 BV-i386 =		1.47.0-20201010
 BV-sparc64 =		1.47.0-20201008
