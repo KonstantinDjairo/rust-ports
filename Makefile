@@ -22,7 +22,7 @@ DISTNAME =		rustc-${V}-src
 # rustc bootstrap version
 BV-aarch64 =		1.46.0-20200827
 BV-amd64 =		1.47.0-20201007
-BV-i386 =		1.46.0-20200825
+BV-i386 =		1.47.0-20201010
 BV-sparc64 =		1.47.0-20201008
 BV =			${BV-${MACHINE_ARCH}}
 
@@ -155,6 +155,12 @@ RUN_DEPENDS-rustfmt +=	lang/rust,-main
 MAKE_ENV +=	CARGO_HOME=${WRKBUILD}/cargo-home \
 		TMPDIR=${WRKBUILD} \
 		LIBSSH2_SYS_USE_PKG_CONFIG=1
+
+# cargo assert() on i386 with standard libz
+.if "${MACHINE_ARCH}" == "i386"
+MAKE_ENV += 	LIBZ_SYS_STATIC=1
+.endif
+
 TEST_ENV +=	RUST_BACKTRACE=0
 
 .ifdef DEBUG
