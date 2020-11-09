@@ -1,4 +1,4 @@
-$OpenBSD: patch-vendor_openssl-sys_build_main_rs,v 1.4 2020/02/11 12:48:20 semarie Exp $
+$OpenBSD: patch-vendor_openssl-sys_build_main_rs,v 1.5 2020/11/05 09:21:34 semarie Exp $
 The LibreSSL version in -current isn't explicitly supported.
 Index: vendor/openssl-sys/build/main.rs
 --- vendor/openssl-sys/build/main.rs.orig

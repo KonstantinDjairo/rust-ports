@@ -1,4 +1,4 @@
-@comment $OpenBSD: PLIST-main,v 1.30 2020/08/27 17:24:57 semarie Exp $
+@comment $OpenBSD: PLIST-main,v 1.31 2020/11/05 09:21:35 semarie Exp $
 @conflict cargo-<0.20.0
 @pkgpath devel/cargo
 @bin bin/cargo
