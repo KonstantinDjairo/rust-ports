@@ -5,7 +5,7 @@ Use an environment variable to use alternate method.
 Index: src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
 --- src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs.orig
 +++ src/tools/cargo/src/cargo/core/compiler/context/compilation_files.rs
-@@ -490,6 +490,19 @@ fn compute_metadata(
+@@ -495,6 +495,19 @@ fn compute_metadata(
      if !should_use_metadata(bcx, unit) {
          return None;
      }
