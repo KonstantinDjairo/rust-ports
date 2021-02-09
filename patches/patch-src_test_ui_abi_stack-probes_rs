@@ -3,11 +3,11 @@ Disable stack-probes test (MAP_STACK terminate the process in a way the testsuit
 Index: src/test/ui/abi/stack-probes.rs
 --- src/test/ui/abi/stack-probes.rs.orig
 +++ src/test/ui/abi/stack-probes.rs
-@@ -8,6 +8,7 @@
- // ignore-sparc
- // ignore-sparc64
- // ignore-wasm
+@@ -3,6 +3,7 @@
+ // ignore-aarch64
+ // ignore-mips
+ // ignore-mips64
 +// ignore-openbsd
- // ignore-cloudabi no processes
- // ignore-emscripten no processes
- // ignore-sgx no processes
+ // ignore-powerpc
+ // ignore-s390x
+ // ignore-sparc
