@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_bootstrap_config_rs,v 1.1 2021/01/06 18:48:25 semarie Exp $
+$OpenBSD: patch-src_bootstrap_config_rs,v 1.2 2021/02/13 18:31:24 semarie Exp $
 
 Override initial_cargo value to use ".../cargo" instead of the
 executable path as returned by env::current_exe() to avoid using
