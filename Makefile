@@ -173,9 +173,6 @@ PATCHORIG =		.openbsd.orig
 SEPARATE_BUILD =	Yes
 USE_GMAKE =		Yes
 
-# need for libbacktrace
-USE_LIBTOOL =		gnu
-
 TEST_DEPENDS +=		devel/git \
 			sysutils/ggrep
 
