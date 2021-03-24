@@ -13,7 +13,7 @@ COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
-V =			1.50.0
+V =			1.51.0
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version

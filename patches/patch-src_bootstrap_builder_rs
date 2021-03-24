@@ -3,7 +3,7 @@ Pass the information that we want to override metadata (on final stage)
 Index: src/bootstrap/builder.rs
 --- src/bootstrap/builder.rs.orig
 +++ src/bootstrap/builder.rs
-@@ -1333,6 +1333,28 @@ impl<'a> Builder<'a> {
+@@ -1353,6 +1353,28 @@ impl<'a> Builder<'a> {
              );
          }
  

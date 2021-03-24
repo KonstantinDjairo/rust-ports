@@ -6,7 +6,7 @@ Index: src/tools/cargo/crates/cargo-test-support/src/paths.rs
 @@ -15,19 +15,7 @@ static CARGO_INTEGRATION_TEST_DIR: &str = "cit";
  
  lazy_static! {
-     static ref GLOBAL_ROOT: PathBuf = {
+     pub static ref GLOBAL_ROOT: PathBuf = {
 -        let mut path = t!(env::current_exe());
 -        path.pop(); // chop off exe name
 -        path.pop(); // chop off 'debug'
