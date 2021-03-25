@@ -86,15 +86,16 @@ LIBRUST_WITH_HASHES =	addr2line			01 \
 			panic_unwind 			0e \
 			proc_macro 			0f \
 			rustc_demangle 			10 \
-			rustc_std_workspace_alloc 	11 \
-			rustc_std_workspace_core 	12 \
-			rustc_std_workspace_std 	13 \
-			std 				14 \
-			term 				15 \
-			test 				16 \
-			tracing_attributes		17 \
-			unicode_width 			18 \
-			unwind				19
+			rustc_driver			11 \
+			rustc_std_workspace_alloc 	12 \
+			rustc_std_workspace_core 	13 \
+			rustc_std_workspace_std 	14 \
+			std 				15 \
+			term 				16 \
+			test 				17 \
+			tracing_attributes		18 \
+			unicode_width 			19 \
+			unwind				20
 
 # generate a stable hash mostly conforming to rust expectations
 # (it should change if anything changed)
