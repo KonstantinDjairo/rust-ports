@@ -73,32 +73,28 @@ SUPDISTFILES +=		${BOOTSTRAP-$m}
 LIBRUST_WITH_HASHES =	addr2line			01 \
 			adler				02 \
 			alloc 				03 \
-			chalk_derive			04 \
-			cfg_if 				05 \
-			compiler_builtins 		06 \
-			core 				07 \
-			getopts 			08 \
-			gimli				09 \
-			hashbrown 			0a \
-			libc 				0b \
-			miniz_oxide			0c \
-			object				0d \
-			panic_abort 			0e \
-			panic_unwind 			0f \
-			proc_macro 			10 \
-			rustc_demangle 			11 \
-			rustc_driver 			12 \
-			rustc_macros 			13 \
-			rustc_std_workspace_alloc 	14 \
-			rustc_std_workspace_core 	15 \
-			rustc_std_workspace_std 	16 \
-			serde_derive			17 \
-			std 				18 \
-			term 				19 \
-			test 				20 \
-			tracing_attributes		21 \
-			unicode_width 			22 \
-			unwind				23
+			cfg_if 				04 \
+			compiler_builtins 		05 \
+			core 				06 \
+			getopts 			07 \
+			gimli				08 \
+			hashbrown 			09 \
+			libc 				0a \
+			miniz_oxide			0b \
+			object				0c \
+			panic_abort 			0d \
+			panic_unwind 			0e \
+			proc_macro 			0f \
+			rustc_demangle 			10 \
+			rustc_std_workspace_alloc 	11 \
+			rustc_std_workspace_core 	12 \
+			rustc_std_workspace_std 	13 \
+			std 				14 \
+			term 				15 \
+			test 				16 \
+			tracing_attributes		17 \
+			unicode_width 			18 \
+			unwind				19
 
 # generate a stable hash mostly conforming to rust expectations
 # (it should change if anything changed)
