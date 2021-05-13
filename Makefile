@@ -13,7 +13,7 @@ COMMENT-gdb =		Rust debugger through gdb
 COMMENT-clippy =	Rust linter
 COMMENT-rustfmt =	Rust code formatter
 
-V =			1.52.0
+V =			1.52.1
 DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
@@ -151,6 +151,10 @@ MAKE_ENV +=	CARGO_HOME=${WRKBUILD}/cargo-home \
 		TMPDIR=${WRKBUILD} \
 		LIBGIT2_SYS_USE_PKG_CONFIG=1 \
 		LIBSSH2_SYS_USE_PKG_CONFIG=1
+
+# XXX temporary workaround for 1.52.0
+# https://github.com/rust-lang/rust/issues/84970
+MAVE_ENV +=	CARGO_INCREMENTAL=0
 
 # cargo assert() on i386 with standard libz
 .if "${MACHINE_ARCH}" == "i386"
