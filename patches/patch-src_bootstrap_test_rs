@@ -4,7 +4,7 @@ Disable "Bootstrap" test by default (it requires network).
 Index: src/bootstrap/test.rs
 --- src/bootstrap/test.rs.orig
 +++ src/bootstrap/test.rs
-@@ -2134,7 +2134,7 @@ pub struct Bootstrap;
+@@ -2232,7 +2232,7 @@ pub struct Bootstrap;
  
  impl Step for Bootstrap {
      type Output = ();

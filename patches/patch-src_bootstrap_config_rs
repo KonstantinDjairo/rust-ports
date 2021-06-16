@@ -7,7 +7,7 @@ bootstrap binary without the shell wrapper.
 Index: src/bootstrap/config.rs
 --- src/bootstrap/config.rs.orig
 +++ src/bootstrap/config.rs
-@@ -972,6 +972,9 @@ impl Config {
+@@ -938,6 +938,9 @@ impl Config {
              }
          });
  
