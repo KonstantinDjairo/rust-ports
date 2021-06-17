@@ -8,9 +8,9 @@ Index: src/bootstrap/bootstrap.py
          if self.get_toml("deny-warnings", "rust") != "false":
              env["RUSTFLAGS"] += " -Dwarnings"
  
--        if self.build_triple() == "sparc64-unknown-openbsd":
--            env["RUSTFLAGS"] += " -Copt-level=3"
--
++        if self.build_triple() == "sparc64-unknown-openbsd":
++            env["RUSTFLAGS"] += " -Copt-level=3"
++
          env["PATH"] = os.path.join(self.bin_root(True), "bin") + \
              os.pathsep + env["PATH"]
          if not os.path.isfile(self.cargo()):
