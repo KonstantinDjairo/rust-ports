@@ -18,7 +18,7 @@ DISTNAME =		rustc-${V}-src
 
 # rustc bootstrap version
 BV-aarch64 =		1.52.0-20210505
-BV-amd64 =		1.52.0-20210504
+BV-amd64 =		1.53.0-20210616
 BV-i386 =		1.52.0-20210504
 BV-sparc64 =		1.52.0-20210504
 BV =			${BV-${MACHINE_ARCH}}
@@ -91,11 +91,12 @@ LIBRUST_WITH_HASHES =	addr2line			01 \
 			rustc_std_workspace_core 	13 \
 			rustc_std_workspace_std 	14 \
 			std 				15 \
-			term 				16 \
-			test 				17 \
-			tracing_attributes		18 \
-			unicode_width 			19 \
-			unwind				20
+			std_detect			16 \
+			term 				17 \
+			test 				18 \
+			tracing_attributes		19 \
+			unicode_width 			20 \
+			unwind				21
 
 # generate a stable hash mostly conforming to rust expectations
 # (it should change if anything changed)
